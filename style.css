@@ -50,7 +50,6 @@ nav {
 
 /********** DOWNLOAD SECTION **********/
 #download {
-    padding-top: 90px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

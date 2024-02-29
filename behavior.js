@@ -37,3 +37,58 @@ moveToTopButton.addEventListener("click", (onclick) => {
     behavior: "smooth"
   });
 });
+
+////////// PARALLAX EFFECT BEHAVIOR \\\\\\\\\\
+
+// Function to calculate the offset top of an element
+function offsetTop(element, acc = 0) {
+  if (!element.offsetParent) {
+    return offsetTop(element.offsetParent, acc + element.offsetTop);
+  }
+  return acc + element.offsetTop;
+}
+
+// Class for creating the parallax effect
+class Parallax {
+  constructor(element) {
+    this.element = element;
+    this.ratio = parseFloat(element.dataset.parallax); // Get the parallax ratio from the dataset
+    this.onScroll = this.onScroll.bind(this);
+    this.onIntersection = this.onIntersection.bind(this);
+    this.elementY = offsetTop(this.element) + this.element.offsetHeight / 2; // Calculate the initial position of the element
+    const observer = new IntersectionObserver(this.onIntersection); // Create an IntersectionObserver
+    observer.observe(element); // Observe the element
+    this.onScroll(); // Call onScroll initially to set the initial state
+  }
+
+  // Intersection observer callback function
+  onIntersection(entries) {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        document.addEventListener("scroll", this.onScroll); // Add scroll event listener when element is intersecting
+        this.elementY = offsetTop(this.element) + this.element.offsetHeight / 2; // Update the element's position
+      } else {
+        document.removeEventListener("scroll", this.onScroll); // Remove scroll event listener when element is not intersecting
+      }
+    }
+  }
+
+  // Function to handle scroll events and apply parallax effect
+  onScroll() {
+    window.requestAnimationFrame(() => {
+      const screenY = window.scrollY + window.innerHeight / 2;
+      const diffY = this.elementY - screenY;
+      this.element.style.setProperty("transform", `translateY(${diffY * -1 * this.ratio}px)`); // Apply transform based on scroll position
+    });
+  }
+
+  // Static method to bind parallax effect to elements
+  static bind() {
+    return Array.from(document.querySelectorAll("[data-parallax]")).map((element) => {
+      return new Parallax(element);
+    });
+  }
+}
+
+// Bind the parallax effect to elements with data-parallax attribute
+Parallax.bind();
