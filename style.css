@@ -42,6 +42,12 @@ nav {
     padding: 10px;
 }
 
+#holberton_survivors_top_logo {
+    height: 50px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
 /********** DOWNLOAD SECTION **********/
 #download {
     padding-top: 90px;
