@@ -201,3 +201,31 @@ nav {
         opacity: 1;
     }
 }
+
+/********** FOOTER **********/
+/* Move to top button */
+#move_to_top_button {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 25px;
+    bottom: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#move_to_top_button img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #move_to_top_button {
+        display: none;
+    }
+}
