@@ -18,6 +18,7 @@
 
 /********** GLOBAL **********/
 body {
+    font-family: monospace;
     color: white;
     background-color: black;
 }
@@ -50,6 +51,7 @@ nav {
 
 /********** DOWNLOAD SECTION **********/
 #download {
+    padding-top: 95px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -132,12 +134,19 @@ nav {
 
 /* Scroll down button */
 #scroll_down_button {
-    width: 50px;
+    width: 75px;
     height: 75px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #scroll_down_button {
+        display: none;
+    }
 }
 
 /* Scroll down button animation */
@@ -204,6 +213,44 @@ nav {
 @keyframes pulse {
     to {
         opacity: 1;
+    }
+}
+
+/********** ABOUT SECTION **********/
+
+#about {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.about_container img {
+    max-height: 300px;
+    margin-bottom: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #about {
+        padding-top: 0;
+    }
+
+    .about_container {
+        width: 100%;
+        padding: 0 25px 0 25px;
+        font-size: 1em;
     }
 }
 
