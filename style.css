@@ -31,6 +31,19 @@ section {
     height: 100vh;
 }
 
+section a {
+    color: #e01d3f;
+}
+
+section a:hover {
+    text-decoration: underline;
+    color: #e01d3f;
+}
+
+section a:visited {
+    color: #e01d3f;
+}
+
 /********** HEADER **********/
 header {
     width: 100%;
@@ -91,7 +104,7 @@ nav {
         top: 70px;
         right: -100%;
         width: 100%;
-        height: 50%;
+        height: 100%;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
@@ -127,6 +140,19 @@ nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#download a {
+    color: white;
+}
+
+#download a {
+    text-decoration: none;
+    color: white;
+}
+
+#download a:visited {
+    color: white;
 }
 
 #holberton_survivors_logo {
@@ -284,22 +310,13 @@ nav {
 }
 
 /********** ABOUT SECTION **********/
-
 #about {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#about a {
-    color: #e01d3f;
-}
-
-#about a:visited {
-    color: #e01d3f;
-}
-
-.about_container {
+#about_container {
     width: 75%;
     display: flex;
     flex-direction: column;
@@ -310,7 +327,7 @@ nav {
     text-align: justify;
 }
 
-.about_container img {
+#about_container img {
     max-height: 300px;
     margin-bottom: 25px;
 }
@@ -321,10 +338,45 @@ nav {
         padding-top: 0;
     }
 
-    .about_container {
+    #about_container {
         width: 100%;
-        padding: 0 25px 0 25px;
-        font-size: 1em;
+        padding: 0 25px;
+        font-size: 1.1em;
+    }
+}
+
+/********** TRAILER SECTION **********/
+#trailer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#trailer_container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+#trailer_container video {
+    width: 75%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #trailer_container {
+        width: 100%;
+        padding: 0 25px;
+        font-size: 1.1em;
+    }
+
+    #trailer_container video {
+        width: 100%;
     }
 }
 
