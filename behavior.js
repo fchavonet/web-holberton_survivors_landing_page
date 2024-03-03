@@ -1,5 +1,20 @@
 /*jshint esversion: 6 */
 
+///// RESPONSIVE NAVIGATION BAR BEHAVIOR /////
+
+// Select the hamburger menu icon
+const hamburgerMenu = document.querySelector("#hamburger_icon");
+// Select the navigation menu container
+const navMenuContainer = document.querySelector("#nav_menu_container");
+
+// Listen for click events on the hamburger icon
+hamburgerMenu.addEventListener("click", () => {
+  // Toggle the "active" class of the hamburger icon
+  hamburgerMenu.classList.toggle("active");
+  // Toggle the "active" class of the navigation menu container
+  navMenuContainer.classList.toggle("active");
+});
+
 ////////// SCROLLING ELEMENTS BEHAVIOR \\\\\\\\\\
 
 // Select the Holberton Survivors top logo

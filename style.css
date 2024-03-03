@@ -41,12 +41,79 @@ header {
 nav {
     height: 70px;
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px 0 black;
 }
 
 #holberton_survivors_top_logo {
     height: 50px;
     opacity: 0;
     transition: 0.3s ease-in-out;
+}
+
+#nav_menu_container {
+    display: flex;
+    align-items: center;
+}
+
+.nav_item {
+    margin: 0 25px;
+}
+
+.nav_link {
+    font-family: "Public Pixel";
+    text-transform: uppercase;
+    color: white;
+}
+
+#hamburger_icon {
+    display: none;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #nav_menu_container {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: 50%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.8);
+        transition: 0.3s;
+    }
+
+    #nav_menu_container.active {
+        right: 0px;
+    }
+
+    .nav_item {
+        font-size: 1.5em;
+    }
+
+    #hamburger_icon {
+        display: block;
+    }
+
+    .bar {
+        display: block;
+    }
 }
 
 /********** DOWNLOAD SECTION **********/
@@ -219,10 +286,17 @@ nav {
 /********** ABOUT SECTION **********/
 
 #about {
-    padding-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#about a {
+    color: #e01d3f;
+}
+
+#about a:visited {
+    color: #e01d3f;
 }
 
 .about_container {
