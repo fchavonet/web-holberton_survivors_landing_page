@@ -79,6 +79,7 @@ nav {
 
 .nav_link {
     font-family: "Public Pixel";
+    font-size: 0.75em;
     text-transform: uppercase;
     color: white;
 }
@@ -104,12 +105,13 @@ nav {
         top: 70px;
         right: -100%;
         width: 100%;
-        height: 100%;
+        height: 50%;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         background: rgba(0, 0, 0, 0.8);
-        transition: 0.3s;
+        box-shadow: 0 0 10px 0 black;
+        transition: 0.3s ease-in-out;
     }
 
     #nav_menu_container.active {
@@ -159,13 +161,6 @@ nav {
     height: 200px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    #holberton_survivors_logo {
-        height: 125px;
-    }
-}
-
 #bottom_elements_container {
     display: flex;
     flex-direction: column;
@@ -181,13 +176,6 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 250px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    #download_buttons_container {
-        display: none;
-    }
 }
 
 .download_button {
@@ -233,13 +221,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    #scroll_down_button {
-        display: none;
-    }
 }
 
 /* Scroll down button animation */
@@ -306,6 +287,21 @@ nav {
 @keyframes pulse {
     to {
         opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #holberton_survivors_logo {
+        height: 125px;
+    }
+
+    #download_buttons_container {
+        display: none;
+    }
+
+    #scroll_down_button {
+        display: none;
     }
 }
 
@@ -377,6 +373,63 @@ nav {
 
     #trailer_container video {
         width: 100%;
+    }
+}
+
+/********** SCREENSHOTS SECTION **********/
+#screenshots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#screenshots_section_container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+#screenshots_container {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 20px;
+}
+
+#screenshots_container img {
+    width: 100%;
+    padding: 5px;
+    object-fit: cover;
+    background-color: white;
+    cursor: pointer;
+}
+
+#screenshots_container img.screenshot_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #screenshots_section_container {
+        width: 100%;
+        padding: 0 25px;
+        font-size: 1.1em;
+    }
+
+    #screenshots_container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 

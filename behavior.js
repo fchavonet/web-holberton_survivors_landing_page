@@ -15,6 +15,7 @@ hamburgerMenu.addEventListener("click", () => {
   navMenuContainer.classList.toggle("active");
 });
 
+
 ////////// SCROLLING ELEMENTS BEHAVIOR \\\\\\\\\\
 
 // Select the Holberton Survivors top logo
@@ -52,6 +53,7 @@ moveToTopButton.addEventListener("click", (onclick) => {
     behavior: "smooth"
   });
 });
+
 
 ////////// PARALLAX EFFECT BEHAVIOR \\\\\\\\\\
 
@@ -107,3 +109,25 @@ class Parallax {
 
 // Bind the parallax effect to elements with data-parallax attribute
 Parallax.bind();
+
+
+///// SCREENSHOTS GALLERY BEHAVIOR /////
+
+window.onload = () => {
+  // Select all the screenshot images within the screenshots container
+  const screenshots = document.querySelectorAll("#screenshots_container img");
+
+  // Loop through each screenshot image
+  for (let screenshot of screenshots) {
+    // Create a function to handle click events
+    const handleClick = (screenshot) => {
+      return () => {
+        // Toggle the "screenshot_overlay" class of the screenshot
+        screenshot.classList.toggle("screenshot_overlay");
+      };
+    };
+
+    // Add event listener for click event
+    screenshot.addEventListener("click", handleClick(screenshot));
+  }
+};
