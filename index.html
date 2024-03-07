@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Holberton Survivors</title>
 
-    <link rel="icon" href="./favicon.ico"/>
+    <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./style.css">
     <script src="./behavior.js" defer></script>
 </head>
@@ -29,6 +29,9 @@
                 </li>
                 <li class="nav_item">
                     <a class="nav_link" href="#screenshots">screenshots</a>
+                </li>
+                <li class="nav_item">
+                    <a class="nav_link" href="#contact">contact</a>
                 </li>
             </ul>
 
@@ -136,6 +139,66 @@
             <p>
                 One of the major challenges of this project was our lack of prior experience in C# and our introduction to the <a href="https://unity.com/" target="_blank">Unity</a> software. We had to learn these technologies on the fly, applying them directly to our project. Thanks to the <a href="https://www.holbertonschool.com/methodology" target="_blank">methodology</a> taught at Holberton School, which prepared us well to tackle this challenge.
             </p>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <h1>CONTACT</h1>
+
+        <div id="contact_form_container">
+            <p>
+                We would like to specify that the game is for demonstration purposes only and is not without flaws.
+                However, we encourage people to provide us with feedback through the form below.
+            </p>
+            <form action="send_email.php" method="post">
+                <div>
+                    <label for="first_name">First name:</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                </div>
+                <div>
+                    <label for="last_name">Last name:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Your feedback:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">SEND FEEDBACK</button>
+            </form>
+        </div>
+
+        <div id="contact_team_container">
+            <div class="fabien">
+                <span>FABIEN</span>
+                <div>
+                    <a href="https://github.com/fchavonet" target="_blank">
+                        <img class="contact_team_icon" src="./resources/images/logo-github.png" alt="Github de Fabien">
+                    </a>
+                    <a href="https://www.linkedin.com/in/fchavonet/" target="_blank">
+                        <img class="contact_team_icon" src="./resources/images/logo-linkedin.png" alt="LinkedIn de Fabien">
+                    </a>
+                </div>
+            </div>
+            <a href="https://www.holbertonschool.fr/" target="_blank">
+                <img id="holberton_seahorse_logotype" src="./resources/images/logo-holberton_seahorse.png" alt="Holberton seahorse logo">
+            </a>
+            <div class="yoann">
+                <span>YOANN</span>
+                <div class="social_media_icons">
+                    <a href="https://www.linkedin.com/in/yoann-rivet-73a1a52aa/" target="_blank">
+                        <img class="contact_team_icon" src="./resources/images/logo-linkedin.png" alt="LinkedIn de Yoann">
+                    </a>
+                    <a href="https://github.com/SpStigma" target="_blank">
+                        <img class="contact_team_icon" src="./resources/images/logo-github.png" alt="Github de Yoann">
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 

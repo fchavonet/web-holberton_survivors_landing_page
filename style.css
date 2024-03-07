@@ -433,6 +433,120 @@ nav {
     }
 }
 
+/********** CONTACT SECTION **********/
+#contact {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+}
+
+/* Contact form */
+#contact_form_container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    resize: none;
+}
+
+button {
+    padding: 10px 15px;
+    float: right;
+    border: none;
+    border-radius: 5px;
+    font-family: "Public Pixel";
+    color: white;
+    background-color: #e01d3f;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a5162e;
+}
+
+/* Contact team */
+#contact_team_container {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fabien,
+.yoann {
+    width: calc(100% / 3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-family: "Public Pixel";
+}
+
+#holberton_seahorse_logotype {
+    height: 75px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact_team_icon {
+    height: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #contact {
+        padding-top: 0;
+        gap: 50px;
+    }
+
+    #contact_form_container {
+        width: 100%;
+        padding: 0 25px;
+        font-size: 1.1em;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 5px;
+    }
+
+    #holberton_seahorse_logotype {
+        height: 50px;
+    }
+
+    .contact_team_icon {
+        height: 25px
+    }
+}
+
 /********** FOOTER **********/
 /* Move to top button */
 #move_to_top_button {
