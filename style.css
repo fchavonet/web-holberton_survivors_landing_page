@@ -354,7 +354,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 75px;
+    gap:25px;
     font-size: 1.5em;
     text-align: justify;
 }
