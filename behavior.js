@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 
-///// RESPONSIVE NAVIGATION BAR BEHAVIOR /////
+
+////////// RESPONSIVE NAVIGATION BAR BEHAVIOR \\\\\/////
 
 // Select the hamburger menu icon
 const hamburgerMenu = document.querySelector("#hamburger_icon");
@@ -51,6 +52,71 @@ moveToTopButton.addEventListener("click", (onclick) => {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
+  });
+});
+
+
+////////// SCREENSHOTS GALLERY BEHAVIOR \\\\\\\\\\
+
+window.onload = () => {
+  // Select all the screenshot images within the screenshots container
+  const screenshots = document.querySelectorAll("#screenshots_container img");
+
+  // Loop through each screenshot image
+  for (let screenshot of screenshots) {
+    // Create a function to handle click events
+    const handleClick = (screenshot) => {
+      return () => {
+        // Toggle the "screenshot_overlay" class of the screenshot
+        screenshot.classList.toggle("screenshot_overlay");
+      };
+    };
+
+    // Add event listener for click event
+    screenshot.addEventListener("click", handleClick(screenshot));
+  }
+};
+
+
+////////// LEADERBOARD BEHAVIOR \\\\\\\\\\
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Select all table cells with the class '.dreamloLBTable'
+  var scoreCells = document.querySelectorAll('.dreamloLBTable td:nth-child(2)');
+
+  // Iterate over each selected cell
+  scoreCells.forEach(function (cell) {
+    // Parse the content of the cell assuming it's in seconds and converts it into an integer
+    var score = parseInt(cell.textContent);
+
+    // Calculate the number of minutes and seconds from the total score
+    var minutes = Math.floor(score / 60);
+    var seconds = score % 60;
+
+    // Format the time into a string as minutes:seconds
+    var formattedTime = minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0');
+
+    // Update the content of the cell with the formatted time
+    cell.textContent = formattedTime;
+  });
+
+  // Modify the text "Name" to "NICKNAME" and "Score" to "TIMER"
+  var tableHeaders = document.querySelectorAll(".dreamloLBTable th");
+  tableHeaders.forEach(function (header) {
+    if (header.textContent === "Name") {
+      header.textContent = "NICKNAME";
+    } else if (header.textContent === "Score") {
+      header.textContent = "TIMER";
+    }
+  });
+
+  // Select all table cells with the class '.dreamloLBTable'
+  var tableCells = document.querySelectorAll('.dreamloLBTable td, .dreamloLBTable th');
+
+  // Iterate over each selected cell
+  tableCells.forEach(function (cell) {
+    // Convert the content of each cell to uppercase
+    cell.textContent = cell.textContent.toUpperCase();
   });
 });
 
@@ -109,25 +175,3 @@ class Parallax {
 
 // Bind the parallax effect to elements with data-parallax attribute
 Parallax.bind();
-
-
-///// SCREENSHOTS GALLERY BEHAVIOR /////
-
-window.onload = () => {
-  // Select all the screenshot images within the screenshots container
-  const screenshots = document.querySelectorAll("#screenshots_container img");
-
-  // Loop through each screenshot image
-  for (let screenshot of screenshots) {
-    // Create a function to handle click events
-    const handleClick = (screenshot) => {
-      return () => {
-        // Toggle the "screenshot_overlay" class of the screenshot
-        screenshot.classList.toggle("screenshot_overlay");
-      };
-    };
-
-    // Add event listener for click event
-    screenshot.addEventListener("click", handleClick(screenshot));
-  }
-};

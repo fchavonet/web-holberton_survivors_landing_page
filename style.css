@@ -74,7 +74,7 @@ nav {
 }
 
 .nav_item {
-    margin: 0 25px;
+    margin: 0 12.5px;
 }
 
 .nav_link {
@@ -354,7 +354,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:25px;
+    gap: 25px;
     font-size: 1.5em;
     text-align: justify;
 }
@@ -433,6 +433,57 @@ nav {
     }
 }
 
+/********** LEADERBOARD SECTION **********/
+#leaderboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#leaderboard h2 {
+    margin-bottom: 50px;
+    font-family: "Public Pixel";
+    font-size: 1.5em;
+}
+
+#leaderboard_container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Public Pixel";
+}
+
+.dreamloLBTable {
+    width: 50%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.dreamloLBTable th {
+    padding: 12.5px;
+    color: #e01d3f;
+    border-bottom: solid 2px white;
+}
+
+.dreamloLBTable td {
+    padding: 12.5px;
+    border-bottom: solid 2px white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #leaderboard h2 {
+        font-size: 1em;
+    }
+
+    #leaderboard_container {
+        font-size: 0.75em;
+    }
+}
+
 /********** CONTACT SECTION **********/
 #contact {
     padding-top: 70px;
@@ -467,6 +518,7 @@ input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
+    margin-top: 5px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid white;
