@@ -53,11 +53,11 @@
     <section id="download">
         <h1>HOME</h1>
 
-        <img id="holberton_survivors_logo" src="./resources/images/logo-holberton_survivors.gif" alt="Holberton Survivors logo">
+        <img data-parallax="0.4" id="holberton_survivors_logo" src="./resources/images/logo-holberton_survivors.gif" alt="Holberton Survivors logo">
 
         <div id="bottom_elements_container">
             <div id="download_buttons_container">
-                <a class="download_button" href="" download="">
+                <a class="download_button" href="./resources/files/windows-holberton_survivors.zip" download="Holberton Survivors.zip">
                     <img src="./resources/images/logo-microsoft.png" alt="Microsoft logo">
                     <span class="text_button_container">
                         <span>DOWNLOAD</span>
@@ -65,7 +65,7 @@
                     </span>
                 </a>
 
-                <a class="download_button" href="" download="">
+                <a class="download_button" href="./resources/files/mac-holberton_survivors.dmg" download="Holberton Survivors.dmg">
                     <img src="./resources/images/logo-apple.png" alt="Apple logo">
                     <span class="text_button_container">
                         <span>DOWNLOAD</span>
@@ -95,10 +95,12 @@
 
             <p>
                 Welcome to the landing page dedicated to our end of first year programming fundamentals project.
-                We are <a href="https://www.linkedin.com/in/fchavonet/" target="_blank">Fabien</a> and <a href="https://www.linkedin.com/in/yoann-rivet-73a1a52aa/" target="_blank">Yoann</a>, students at <a href="https://www.holbertonschool.fr/campus/toulouse" target="_blank">Holberton School</a> in Toulouse, France.
+                We are <a href="https://www.linkedin.com/in/fchavonet/" target="_blank">Fabien</a> and <a href="https://www.linkedin.com/in/yoann-rivet/" target="_blank">Yoann</a>, students at <a href="https://www.holbertonschool.fr/campus/toulouse" target="_blank">Holberton School</a> in Toulouse, France.
             </p>
             <p>
-                This project is of paramount importance in our learning journey and will serve to validate our knowledge acquired during this first year before continuing our education.
+                Our project is driven by our shared passion for video games. As lifelong gamers, creating our own game has always been a dream. This project not only fulfills that dream but also aligns with our goal of <a href="https://www.holbertonschool.fr/programme/specialisations/arvr" target="_blank">specializing in AR/VR</a> technologies at Holberton School. By developing a game, we're not just indulging our passion but also gaining crucial experience in <a href="https://unity.com/" target="_blank">Unity</a>, paving the way for our future endeavors.            </p>
+            <p>
+                This project marks a pivotal point in our learning journey, validating the knowledge we've acquired in our first year before advancing further in our education.
             </p>
         </div>
     </section>
@@ -109,20 +111,28 @@
 
         <div id="trailer_container">
             <p>
-                We are proud to present Holberton Survivors, a game inspired by the famous one: <a href="https://store.steampowered.com/app/1794680/Vampire_Survivors/" target="_blank">Vampire Survivors</a>.
+                We are proud to present <span>Holberton Survivors!</span>
             </p>
 
-            <video controls>
-                <source src="./resources/videos/trailer-holberton_survivors.mp4" type="video/mp4">
-                <p>
-                    Your browser does not support HTML5 video playback.
-                </p>
-                <p>
-                    Here is a <a href="./resources/videos/trailer-holberton_survivors.mp4" download="Holberton Survivors Trailer">link to download the video.</a>.
-                </p>
-            </video>
+            <div id="video_container">
+                <div id="video_overlay">
+                    <img id="play_video_button" src="./resources/images/logo-play_video_button.png" alt="Play video button">
+                </div>
+
+                <video id="video_player" controls>
+                    <source src="./resources/videos/trailer-holberton_survivors.mp4" type="video/mp4">
+                    <p>
+                        Your browser does not support HTML5 video playback.
+                    </p>
+                    <p>
+                        Here is a <a href="./resources/videos/trailer-holberton_survivors.mp4" download="Holberton Survivors Trailer">link to download the video.</a>.
+                    </p>
+                </video>
+            </div>
 
             <p>
+                A game inspired by the famous one: <a href="https://store.steampowered.com/app/1794680/Vampire_Survivors/" target="_blank">Vampire Survivors</a>.
+                <br>
                 Completed in two months, one dedicated to project preparation and other one of intensive coding.
             </p>
         </div>
@@ -143,7 +153,7 @@
             </div>
 
             <p>
-                One of the major challenges of this project was our lack of prior experience in C# and our introduction to the <a href="https://unity.com/" target="_blank">Unity</a> software. We had to learn these technologies on the fly, applying them directly to our project. Thanks to the <a href="https://www.holbertonschool.com/methodology" target="_blank">methodology</a> taught at Holberton School, which prepared us well to tackle this challenge.
+                One of the major challenges of this project was our lack of prior experience in <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank">C#</a> and our introduction to the <a href="https://unity.com/" target="_blank">Unity</a> software. We had to learn these technologies on the fly, applying them directly to our project. Thanks to the <a href="https://www.holbertonschool.fr/methodologie" target="_blank">methodology</a> taught at Holberton School, which prepared us well to tackle this challenge.
             </p>
         </div>
     </section>

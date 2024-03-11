@@ -56,6 +56,44 @@ moveToTopButton.addEventListener("click", (onclick) => {
 });
 
 
+////////// VIDEO PLAYER BEHAVIOR \\\\\\\\\\
+
+document.addEventListener('DOMContentLoaded', function () {
+  var playButton = document.getElementById('play_video_button');
+  var videoOverlay = document.getElementById('video_overlay');
+  var videoPlayer = document.getElementById('video_player');
+  var isVideoPlaying = false;
+
+  playButton.addEventListener('click', function () {
+    videoOverlay.style.display = 'none';
+    videoPlayer.play();
+    isVideoPlaying = true;
+  });
+
+  videoPlayer.addEventListener('ended', function () {
+    videoOverlay.style.display = 'flex';
+    videoPlayer.currentTime = 0;
+    videoPlayer.pause();
+    isVideoPlaying = false;
+  });
+
+  window.addEventListener('scroll', function () {
+    if (isVideoPlaying) {
+      var videoRect = videoPlayer.getBoundingClientRect();
+      var isInView = (
+        videoRect.top >= 0 &&
+        videoRect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+      );
+      if (!isInView) {
+        videoOverlay.style.display = 'flex';
+        videoPlayer.pause();
+        isVideoPlaying = false;
+      }
+    }
+  });
+});
+
+
 ////////// SCREENSHOTS GALLERY BEHAVIOR \\\\\\\\\\
 
 window.onload = () => {
