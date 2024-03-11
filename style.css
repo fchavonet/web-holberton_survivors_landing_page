@@ -398,7 +398,7 @@ nav {
     gap: 25px;
     font-family: "Public Pixel";
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(224, 29, 63, 0.8);
     z-index: 999;
 }
 
@@ -619,6 +619,24 @@ nav {
 
     #music_container {
         flex-direction: column;
+    }
+}
+
+/********** PARALLAX EFFECT **********/
+#parallax {
+    height: 250px;
+    margin-top: 125px;
+    background-image: url(./resources/images/parallax-background.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #parallax {
+        display: none;
     }
 }
 
