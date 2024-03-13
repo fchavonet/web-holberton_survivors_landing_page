@@ -57,7 +57,7 @@
 
         <div id="bottom_elements_container">
             <div id="download_buttons_container">
-                <a class="download_button" href="./resources/files/windows-holberton_survivors.zip" download="Holberton Survivors.zip">
+                <a class="download_button hidden_left" href="./resources/files/windows-holberton_survivors.zip" download="Holberton Survivors.zip">
                     <img src="./resources/images/logo-microsoft.png" alt="Microsoft logo">
                     <span class="text_button_container">
                         <span>DOWNLOAD</span>
@@ -65,7 +65,7 @@
                     </span>
                 </a>
 
-                <a class="download_button" href="./resources/files/mac-holberton_survivors.dmg" download="Holberton Survivors.dmg">
+                <a class="download_button hidden_right" href="./resources/files/mac-holberton_survivors.dmg" download="Holberton Survivors.dmg">
                     <img src="./resources/images/logo-apple.png" alt="Apple logo">
                     <span class="text_button_container">
                         <span>DOWNLOAD</span>
@@ -75,7 +75,7 @@
             </div>
 
             <a href="#about">
-                <div id="scroll_down_button">
+                <div id="scroll_down_button" class="hidden_bottom">
                     <div class="chevron"></div>
                     <div class="chevron"></div>
                     <div class="chevron"></div>
@@ -89,17 +89,18 @@
         <h1>ABOUT</h1>
 
         <div id="about_container">
-            <a href="https://www.holbertonschool.com/" target="_blank">
+            <a class="hidden_top" href="https://www.holbertonschool.com/" target="_blank">
                 <img src="./resources/images/logo-holberton_schools.png" alt="Holberton School logo">
             </a>
 
-            <p>
+            <p class="hidden">
                 Welcome to the landing page dedicated to our end of first year programming fundamentals project.
                 We are <a href="https://www.linkedin.com/in/fchavonet/" target="_blank">Fabien</a> and <a href="https://www.linkedin.com/in/yoann-rivet/" target="_blank">Yoann</a>, students at <a href="https://www.holbertonschool.fr/campus/toulouse" target="_blank">Holberton School</a> in Toulouse, France.
             </p>
-            <p>
-                Our project is driven by our shared passion for video games. As lifelong gamers, creating our own game has always been a dream. This project not only fulfills that dream but also aligns with our goal of <a href="https://www.holbertonschool.fr/programme/specialisations/arvr" target="_blank">specializing in AR/VR</a> technologies at Holberton School. By developing a game, we're not just indulging our passion but also gaining crucial experience in <a href="https://unity.com/" target="_blank">Unity</a>, paving the way for our future endeavors.            </p>
-            <p>
+            <p class="hidden">
+                Our project is driven by our shared passion for video games. As lifelong gamers, creating our own game has always been a dream. This project not only fulfills that dream but also aligns with our goal of <a href="https://www.holbertonschool.fr/programme/specialisations/arvr" target="_blank">specializing in AR/VR</a> technologies at Holberton School. By developing a game, we're not just indulging our passion but also gaining crucial experience in <a href="https://unity.com/" target="_blank">Unity</a>, paving the way for our future endeavors.
+            </p>
+            <p class="hidden">
                 This project marks a pivotal point in our learning journey, validating the knowledge we've acquired in our first year before advancing further in our education.
             </p>
         </div>
@@ -110,13 +111,13 @@
         <h1>TRAILER</h1>
 
         <div id="trailer_container">
-            <p>
+            <p class="hidden_top">
                 We are proud to present
                 <br>
                 <span>Holberton Survivors!</span>
             </p>
 
-            <div id="video_container">
+            <div id="video_container" class="hidden">
                 <div id="video_overlay">
                     <img id="play_video_button" src="./resources/images/logo-play_video_button.png" alt="Play video button">
                 </div>
@@ -132,7 +133,7 @@
                 </video>
             </div>
 
-            <p>
+            <p class="hidden_bottom">
                 A game inspired by the famous one: <a href="https://store.steampowered.com/app/1794680/Vampire_Survivors/" target="_blank">Vampire Survivors</a>.
                 <br>
                 Completed in two months, one dedicated to project preparation and other one of intensive coding.
@@ -146,22 +147,22 @@
 
         <div id="screenshots_section_container">
             <div id="screenshots_container">
-                <img src="./resources/images/screenshots/screenshot001.png" title="Sceenshot N°1" alt="Game screenshot N°1">
-                <img src="./resources/images/screenshots/screenshot002.png" title="Sceenshot N°2" alt="Game screenshot N°2">
-                <img src="./resources/images/screenshots/screenshot003.png" title="Sceenshot N°3" alt="Game screenshot N°3">
-                <img src="./resources/images/screenshots/screenshot004.png" title="Sceenshot N°4" alt="Game screenshot N°4">
-                <img src="./resources/images/screenshots/screenshot005.png" title="Sceenshot N°5" alt="Game screenshot N°5">
-                <img src="./resources/images/screenshots/screenshot006.png" title="Sceenshot N°6" alt="Game screenshot N°6">
+                <img class="screenshot hidden_left" src="./resources/images/screenshots/screenshot001.png" title="Sceenshot N°1" alt="Game screenshot N°1">
+                <img class="screenshot hidden_left" src="./resources/images/screenshots/screenshot002.png" title="Sceenshot N°2" alt="Game screenshot N°2">
+                <img class="screenshot hidden_left" src="./resources/images/screenshots/screenshot003.png" title="Sceenshot N°3" alt="Game screenshot N°3">
+                <img class="screenshot hidden_right" src="./resources/images/screenshots/screenshot004.png" title="Sceenshot N°4" alt="Game screenshot N°4">
+                <img class="screenshot hidden_right" src="./resources/images/screenshots/screenshot005.png" title="Sceenshot N°5" alt="Game screenshot N°5">
+                <img class="screenshot hidden_right" src="./resources/images/screenshots/screenshot006.png" title="Sceenshot N°6" alt="Game screenshot N°6">
             </div>
 
-            <p>
+            <p class="hidden_bottom">
                 One of the major challenges of this project was our lack of prior experience in <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank">C#</a> and our introduction to the <a href="https://unity.com/" target="_blank">Unity</a> software. We had to learn these technologies on the fly, applying them directly to our project. Thanks to the <a href="https://www.holbertonschool.fr/methodologie" target="_blank">methodology</a> taught at Holberton School, which prepared us well to tackle this challenge.
             </p>
         </div>
     </section>
 
     <!-- LEADERBOARD SECTION -->
-    <section id="leaderboard">
+    <section id="leaderboard" class="hidden_bottom">
         <h1>LEADERBOARD</h1>
         <h2>BONUS LEVEL LEADERBOARD</h2>
 
@@ -176,18 +177,17 @@
         <h1>THANKS</h1>
 
         <div id="thanks_container">
-            <p>
-
+            <p class="hidden">
                 Despite the obstacles encountered, we are proud of the outcome we have achieved. This game is the result of our determination, passion, and willingness to learn.
                 <br>
                 We also invite those who would like more information to visit the project's <a href="https://github.com/fchavonet/unity-2d-holberton_survivors" target="_blank">GitHub</a> page.
             </p>
-            <p>
+            <p class="hidden">
                 A heartfelt thank you to all contributors who provided freely licensed graphics and music for our project. Your generosity has truly enhanced our work, bringing our vision to life.
             </p>
 
             <div id="thanks_links_container">
-                <div id="graphical_assets_container">
+                <div id="graphical_assets_container" class="hidden">
                     <a href="https://0x72.itch.io/dungeontileset-ii" target="_blank">
                         <img src="./resources/images/thanks-dungeon_tileset.png" alt="Dungeon Tileset">
                     </a>
@@ -198,7 +198,7 @@
 
                 <div id="music_container">
                     <div class="music_container_divider">
-                        <div class="music_items">
+                        <div class="music_items hidden_top">
                             <p>
                                 Title screen: <a href="https://pixabay.com/fr/music/ambiant-sword-1-188700/" target="_blank">Sword 1</a>
                             </p>
@@ -211,7 +211,7 @@
                             </p>
                         </div>
 
-                        <div class="music_items">
+                        <div class="music_items hidden_bottom">
                             <p>
                                 Level one: <a href="https://pixabay.com/fr/music/impulsions-dark-ambient-background-music-for-your-project-189055/" target="_blank">Dark Ambiant</a>
                             </p>
@@ -226,7 +226,7 @@
                     </div>
 
                     <div class="music_container_divider">
-                        <div class="music_items">
+                        <div class="music_items hidden_top">
                             <p>
                                 Hub: <a href="https://pixabay.com/fr/music/mystere-an-alien-presence-154528/" target="_blank">An Alien Presence</a>
                             </p>
@@ -239,7 +239,7 @@
                             </p>
                         </div>
 
-                        <div class="music_items">
+                        <div class="music_items hidden_bottom">
                             <p>
                                 Game over: <a href="https://pixabay.com/fr/music/mystere-midnight-secrets-190649/" target="_blank">Midnight Secrets</a>
                             </p>
@@ -268,32 +268,32 @@
         <h1>CONTACT</h1>
 
         <div id="contact_form_container">
-            <p>
+            <p class="hidden">
                 We would like to specify that the game is for demonstration purposes only and is not without flaws.
                 However, we encourage people to provide us with feedback through the form below.
             </p>
             <form action="send_email.php" method="post">
-                <div>
+                <div class="hidden_bottom">
                     <label for="first_name">First name:</label>
                     <input type="text" id="first_name" name="first_name" required>
                 </div>
-                <div>
+                <div class="hidden_bottom">
                     <label for="last_name">Last name:</label>
                     <input type="text" id="last_name" name="last_name" required>
                 </div>
-                <div>
+                <div class="hidden_bottom">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-                <div>
+                <div class="hidden_bottom">
                     <label for="message">Your feedback:</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <button type="submit">SEND FEEDBACK</button>
+                <button class="hidden_bottom" type="submit">SEND FEEDBACK</button>
             </form>
         </div>
 
-        <div id="contact_team_container">
+        <div id="contact_team_container" class="hidden_bottom">
             <div class="fabien">
                 <span>FABIEN</span>
                 <div>

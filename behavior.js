@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 
 
-////////// RESPONSIVE NAVIGATION BAR BEHAVIOR \\\\\/////
+////////// RESPONSIVE NAVIGATION BAR BEHAVIOR \\\\\\\\\\
 
 // Select the hamburger menu icon
 const hamburgerMenu = document.querySelector("#hamburger_icon");
@@ -15,6 +15,37 @@ hamburgerMenu.addEventListener("click", () => {
   // Toggle the "active" class of the navigation menu container
   navMenuContainer.classList.toggle("active");
 });
+
+
+////////// GLOBAL PAGE ANIMATION \\\\\\\\\\
+
+// Create an IntersectionObserver to handle animations based on element visibility
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    // Check if the observed element is intersecting with the viewport
+    if (entry.isIntersecting) {
+      // Add animation classes based on the type of hidden class
+      if (entry.target.classList.contains("hidden")) {
+        entry.target.classList.add("show");
+      } else if (entry.target.classList.contains("hidden_top")) {
+        entry.target.classList.add("show_top");
+      } else if (entry.target.classList.contains("hidden_right")) {
+        entry.target.classList.add("show_right");
+      } else if (entry.target.classList.contains("hidden_bottom")) {
+        entry.target.classList.add("show_bottom");
+      } else if (entry.target.classList.contains("hidden_left")) {
+        entry.target.classList.add("show_left");
+      }
+    } else {
+      // Remove animation classes if element is not intersecting
+      entry.target.classList.remove("show", "show_top", "show_right", "show_bottom", "show_left");
+    }
+  });
+});
+
+// Select all elements with hidden animation classes and observe them
+const hiddenElements = document.querySelectorAll(".hidden, .hidden_top, .hidden_right, .hidden_bottom, .hidden_left");
+hiddenElements.forEach((el) => observer.observe(el));
 
 
 ////////// SCROLLING ELEMENTS BEHAVIOR \\\\\\\\\\
