@@ -795,7 +795,6 @@ button:hover {
 }
 
 /********** GLOBAL PAGE ANIMATION **********/
-
 .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -824,7 +823,7 @@ button:hover {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(100%);
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 .show_right {
@@ -850,7 +849,7 @@ button:hover {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 .show_left {
@@ -878,5 +877,17 @@ button:hover {
 
     .hidden_left {
         transition: none;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hidden_right {
+        transform: translateX(0);
+    }
+
+    .hidden_left {
+        transform: translateX(0);
+        transition: all 1s;
     }
 }

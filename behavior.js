@@ -16,6 +16,19 @@ hamburgerMenu.addEventListener("click", () => {
   navMenuContainer.classList.toggle("active");
 });
 
+// Select all navigation links
+const navLinks = document.querySelectorAll(".nav_link");
+
+// Iterate over each navigation link to add an event listener
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    // Close the menu by removing the "active" class from the navigation menu container
+    navMenuContainer.classList.remove("active");
+    // Reset the hamburger icon to its initial state if necessary
+    hamburgerMenu.classList.remove("active");
+  });
+});
+
 
 ////////// GLOBAL PAGE ANIMATION \\\\\\\\\\
 
