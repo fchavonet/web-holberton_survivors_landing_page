@@ -1,6 +1,54 @@
 /*jshint esversion: 6 */
 
 
+////////// \\\\\\\\\\
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+function setActiveNavLinks() {
+  const sections = document.querySelectorAll('section');
+  let activeNav = null;
+  sections.forEach(section => {
+    const navLink = document.querySelector(`.nav_link[href="#${section.id}"]`);
+    if (isInViewport(section)) {
+      activeNav = navLink;
+      navLink.classList.add('active');
+    } else {
+      navLink.classList.remove('active');
+    }
+  });
+
+  if (activeNav) {
+    const navLinks = document.querySelectorAll('.nav_link');
+    navLinks.forEach(navLink => {
+      navLink.classList.remove('active-before');
+    });
+    activeNav.classList.add('active-before');
+  }
+
+  const nextSection = document.querySelector('section:not(.active):not(.active-before)');
+  if (nextSection && isInViewport(nextSection)) {
+    const nextNavLink = document.querySelector(`.nav_link[href="#${nextSection.id}"]`);
+    nextNavLink.classList.add('active-before');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setActiveNavLinks();
+});
+
+window.addEventListener('scroll', () => {
+  setActiveNavLinks();
+});
+
+
 ////////// RESPONSIVE NAVIGATION BAR BEHAVIOR \\\\\\\\\\
 
 // Select the hamburger menu icon

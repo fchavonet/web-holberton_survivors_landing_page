@@ -78,10 +78,29 @@ nav {
 }
 
 .nav_link {
+    position: relative;
     font-family: "Public Pixel";
     font-size: 0.75em;
     text-transform: uppercase;
     color: white;
+}
+
+.nav_link::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    border-radius: 50%;
+    background-color: #e01d3f;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 0.1s ease-in-out;
+}
+
+.nav_link.active-before::before {
+    opacity: 1;
 }
 
 #hamburger_icon {
@@ -120,6 +139,10 @@ nav {
 
     .nav_item {
         font-size: 1.5em;
+    }
+
+    .nav_link::before {
+        display: none;
     }
 
     #hamburger_icon {
@@ -642,8 +665,8 @@ nav {
 
 /********** CONTACT SECTION **********/
 #contact {
-    height: 100vh;
     padding-top: 70px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -700,6 +723,10 @@ button:hover {
 }
 
 /* Contact team */
+#contact {
+    padding-top: 50px;
+}
+
 #contact_team_container {
     width: 75%;
     display: flex;
