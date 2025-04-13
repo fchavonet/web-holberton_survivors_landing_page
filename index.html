@@ -4,328 +4,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holberton Survivors</title>
 
+    <title>Holberton Survivors</title>
     <link rel="icon" href="./favicon.ico">
+    <meta name="description" content="">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
-    <script src="./behavior.js" defer></script>
+
+    <!-- Script -->
+    <script src="./script.js" defer></script>
+
+    <!-- Particles.js -->
+    <script src="./particles.js"></script>
 </head>
 
 <body>
     <!-- HEADER -->
     <header>
-        <nav>
-            <img id="holberton_survivors_top_logo" src="./resources/images/logo-holberton_survivors.gif" alt="Holberton Survivors top logo">
+        <!-- Brand -->
+        <a class="nav-link" href="#download-section" data-section-id="download-section">
+            <img id="holberton-survivors-brand" src="./assets/images/logo-holberton_survivors.gif" alt="Holberton Survivors brand">
+        </a>
 
-            <ul id="nav_menu_container">
-                <li class="nav_item">
-                    <a class="nav_link" href="#download">download</a>
+        <!-- Navigation menu -->
+        <nav>
+            <ul id="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-section" data-section-id="about-section">About</a>
                 </li>
-                <li class="nav_item">
-                    <a class="nav_link" href="#about">about</a>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#leaderboard-section" data-section-id="leaderboard-section">Leaderboard</a>
                 </li>
-                <li class="nav_item">
-                    <a class="nav_link" href="#trailer">trailer</a>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#thanks-section" data-section-id="thanks-section">Thanks</a>
                 </li>
-                <li class="nav_item">
-                    <a class="nav_link" href="#screenshots">screenshots</a>
-                </li>
-                <li class="nav_item">
-                    <a class="nav_link" href="#leaderboard">leaderboard</a>
-                </li>
-                <li class="nav_item">
-                    <a class="nav_link" href="#thanks">thanks</a>
-                </li>
-                <li class="nav_item">
-                    <a class="nav_link" href="#contact">contact</a>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-section" data-section-id="contact-section">Contact</a>
                 </li>
             </ul>
 
-            <div id="hamburger_icon">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <!-- Download button -->
+            <button id="download-nav-button" onclick="scrollToSection('download-section')">Download</button>
         </nav>
+
+        <!-- Hamburger icon -->
+        <div id="hamburger-icon">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </header>
 
-    <!-- DOWNLOAD SECTION -->
-    <section id="download">
-        <h1>HOME</h1>
+    <!-- Responsive navigation menu background (blurred)-->
+    <div id="responsive-menu-background"></div>
 
-        <img data-parallax="0.4" id="holberton_survivors_logo" src="./resources/images/logo-holberton_survivors.gif" alt="Holberton Survivors logo">
+    <!-- MAIN -->
+    <main>
+        <!-- Download section -->
+        <section id="download-section">
+            <h2>Download</h2>
 
-        <div id="bottom_elements_container">
-            <div id="download_buttons_container">
-                <a class="download_button hidden_left" href="./resources/files/windows-holberton_survivors.zip" download="Holberton Survivors.zip">
-                    <img src="./resources/images/logo-microsoft.png" alt="Microsoft logo">
-                    <span class="text_button_container">
-                        <span>DOWNLOAD</span>
-                        <span class="os_text">Windows x64</span>
+            <img id="holberton-survivors-logo" src="./assets/images/logo-holberton_survivors.gif" alt="Holberton Survivors logo">
+
+            <div id="download-buttons-container">
+                <button class="download-button hidden-left" onclick="window.location.href='./assets/files/holberton_survivors-windows.zip'">
+                    <img src="./assets/images/logo-microsoft.webp" alt="Microsoft logo">
+
+                    <span class="text-button-container">
+                        <span>DOWNLAOD</span>
+                        <span class="os-text">Windows x64</span>
                     </span>
-                </a>
+                </button>
 
-                <a class="download_button hidden_right" href="./resources/files/mac-holberton_survivors.dmg" download="Holberton Survivors.dmg">
-                    <img src="./resources/images/logo-apple.png" alt="Apple logo">
-                    <span class="text_button_container">
+                <button class="download-button hidden-right" onclick="window.location.href='./assets/files/holberton_survivors-mac.zip'">
+                    <img src="./assets/images/logo-apple.webp" alt="Apple logo">
+
+                    <span class="text-button-container">
                         <span>DOWNLOAD</span>
-                        <span class="os_text">Mac Universal</span>
+                        <span class="os-text">Mac Universal</span>
                     </span>
-                </a>
+                </button>
             </div>
 
-            <a href="#about">
-                <div id="scroll_down_button" class="hidden_bottom">
+            <a id="scroll-down-link" class="nav-link" href="#about-section" data-section-id="about-section">
+                <div id="scroll-down-button" class="hidden">
                     <div class="chevron"></div>
                     <div class="chevron"></div>
                     <div class="chevron"></div>
                 </div>
             </a>
-        </div>
-    </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about">
-        <h1>ABOUT</h1>
+            <!-- Particles.js -->
+            <div id="particles-js"></div>
+        </section>
 
-        <div id="about_container">
-            <a class="hidden_top" href="https://www.holbertonschool.com/" target="_blank">
-                <img src="./resources/images/logo-holberton_schools.png" alt="Holberton School logo">
-            </a>
+        <!-- About section -->
+        <section id="about-section">
+            <h2>About</h2>
 
-            <p class="hidden">
-                Welcome to the landing page dedicated to our end of first year programming fundamentals project.
-                We are <a href="https://www.linkedin.com/in/fchavonet/" target="_blank">Fabien</a> and <a href="https://www.linkedin.com/in/yoann-rivet/" target="_blank">Yoann</a>, students at <a href="https://www.holbertonschool.fr/campus/toulouse" target="_blank">Holberton School</a> in Toulouse, France.
-            </p>
-            <p class="hidden">
-                Our project is driven by our shared passion for video games. As lifelong gamers, creating our own game has always been a dream. This project not only fulfills that dream but also aligns with our goal of <a href="https://www.holbertonschool.fr/programme/specialisations/arvr" target="_blank">specializing in AR/VR</a> technologies at Holberton School. By developing a game, we're not just indulging our passion but also gaining crucial experience in <a href="https://unity.com/" target="_blank">Unity</a>, paving the way for our future endeavors.
-            </p>
-            <p class="hidden">
-                This project marks a pivotal point in our learning journey, validating the knowledge we've acquired in our first year before advancing further in our education.
-            </p>
-        </div>
-    </section>
+            <div id="about-container">
+                <a class="hidden-top" href="https://www.holbertonschool.fr/" target="_blank">
+                    <img src="./assets/images/logo-holberton_schools.webp" alt="Holberton School logo">
+                </a>
 
-    <!-- TRAILER SECTION -->
-    <section id="trailer">
-        <h1>TRAILER</h1>
-
-        <div id="trailer_container">
-            <p class="hidden_top">
-                We are proud to present
-                <br>
-                <span>Holberton Survivors!</span>
-            </p>
-
-            <div id="video_container" class="hidden">
-                <div id="video_overlay">
-                    <img id="play_video_button" src="./resources/images/logo-play_video_button.png" alt="Play video button">
-                </div>
-
-                <video id="video_player" controls>
-                    <source src="./resources/videos/trailer-holberton_survivors.mp4" type="video/mp4">
-                    <p>
-                        Your browser does not support HTML5 video playback.
-                    </p>
-                    <p>
-                        Here is a <a href="./resources/videos/trailer-holberton_survivors.mp4" download="Holberton Survivors Trailer">link to download the video.</a>.
-                    </p>
-                </video>
+                <p class="hidden">Welcome to the landing page dedicated to our end of first year programming fundamentals project. We are <a href="https://www.linkedin.com/in/fchavonet/" target="_blank">Fabien</a> and <a href="https://www.linkedin.com/in/yoann-rivet/" target="_blank">Yoann</a>, students at <a href="https://www.holbertonschool.fr/campus/toulouse" target="_blank">Holberton School</a> in Toulouse, France.</p>
+                <p class="hidden">Our project is driven by our shared passion for video games. As lifelong gamers, creating our own game has always been a dream. This project not only fulfills that dream but also aligns with our goal of <a href="https://www.holbertonschool.fr/programme/specialisations/arvr" target="_blank">specializing in AR/VR</a> technologies at Holberton School. By developing a game, we're not just indulging our passion but also gaining crucial experience in <a href="https://unity.com/" target="_blank">Unity</a>, paving the way for our future endeavors.</p>
+                <p class="hidden">This project marks a pivotal point in our learning journey, validating the knowledge we've acquired in our first year before advancing further in our education.</p>
             </div>
 
-            <p class="hidden_bottom">
-                A game inspired by the famous one: <a href="https://store.steampowered.com/app/1794680/Vampire_Survivors/" target="_blank">Vampire Survivors</a>.
-                <br>
-                Completed in two months, one dedicated to project preparation and other one of intensive coding.
-            </p>
-        </div>
-    </section>
+            <div id="trailer-container">
+                <p class="text-align-center hidden">
+                    We are proud to present...
+                    <br>
+                    <br>
+                    <span>HOLBERTON SURVIVORS!</span>
+                </p>
 
-    <!-- SCREENSHOTS SECTION -->
-    <section id="screenshots">
-        <h1>SCREENSHOTS</h1>
-
-        <div id="screenshots_section_container">
-            <div id="screenshots_container">
-                <img class="screenshot" src="./resources/images/screenshots/screenshot001.png" title="Sceenshot N°1" alt="Game screenshot N°1">
-                <img class="screenshot" src="./resources/images/screenshots/screenshot002.png" title="Sceenshot N°2" alt="Game screenshot N°2">
-                <img class="screenshot" src="./resources/images/screenshots/screenshot003.png" title="Sceenshot N°3" alt="Game screenshot N°3">
-                <img class="screenshot" src="./resources/images/screenshots/screenshot004.png" title="Sceenshot N°4" alt="Game screenshot N°4">
-                <img class="screenshot" src="./resources/images/screenshots/screenshot005.png" title="Sceenshot N°5" alt="Game screenshot N°5">
-                <img class="screenshot" src="./resources/images/screenshots/screenshot006.png" title="Sceenshot N°6" alt="Game screenshot N°6">
-            </div>
-
-            <p class="hidden_bottom">
-                One of the major challenges of this project was our lack of prior experience in <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank">C#</a> and our introduction to the <a href="https://unity.com/" target="_blank">Unity</a> software. We had to learn these technologies on the fly, applying them directly to our project. Thanks to the <a href="https://www.holbertonschool.fr/methodologie" target="_blank">methodology</a> taught at Holberton School, which prepared us well to tackle this challenge.
-            </p>
-        </div>
-    </section>
-
-    <!-- LEADERBOARD SECTION -->
-    <section id="leaderboard" class="hidden_bottom">
-        <h1>LEADERBOARD</h1>
-        <h2>BONUS LEVEL LEADERBOARD</h2>
-
-        <div id="leaderboard_container">
-
-            <script src="https://www.dreamlo.com/lb/65eb5bc08f40bcbe8897ef97/js"></script>
-        </div>
-    </section>
-
-    <!-- THANKS SECTION -->
-    <section id="thanks">
-        <h1>THANKS</h1>
-
-        <div id="thanks_container">
-            <p class="hidden">
-                Despite the obstacles encountered, we are proud of the outcome we have achieved. This game is the result of our determination, passion, and willingness to learn.
-                <br>
-                We also invite those who would like more information to visit the project's <a href="https://github.com/fchavonet/unity-2d-holberton_survivors" target="_blank">GitHub</a> page.
-            </p>
-            <p class="hidden">
-                A heartfelt thank you to all contributors who provided freely licensed graphics and music for our project. Your generosity has truly enhanced our work, bringing our vision to life.
-            </p>
-
-            <div id="thanks_links_container">
-                <div id="graphical_assets_container" class="hidden">
-                    <a href="https://0x72.itch.io/dungeontileset-ii" target="_blank">
-                        <img src="./resources/images/thanks-dungeon_tileset.png" alt="Dungeon Tileset">
-                    </a>
-                    <p>
-                        By <a href="https://0x72.itch.io/" target="_blank">Robert Norenberg</a> from <a href="https://itch.io/" target="_blank">itch.io</a>
-                    </p>
-                </div>
-
-                <div id="music_container">
-                    <div class="music_container_divider">
-                        <div class="music_items hidden_top">
-                            <p>
-                                Title screen: <a href="https://pixabay.com/fr/music/ambiant-sword-1-188700/" target="_blank">Sword 1</a>
-                            </p>
-                            <audio controls>
-                                <source src="./resources/audio/music-sword_1.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                            <p>
-                                By <a href="https://pixabay.com/fr/users/its_tigri-42054041/" target="_blank">its_tigri</a> from <a href="https://pixabay.com/" target="_blank">Pixabay</a>.
-                            </p>
-                        </div>
-
-                        <div class="music_items hidden_bottom">
-                            <p>
-                                Level one: <a href="https://pixabay.com/fr/music/impulsions-dark-ambient-background-music-for-your-project-189055/" target="_blank">Dark Ambiant</a>
-                            </p>
-                            <audio controls>
-                                <source src="./resources/audio/music-dark_ambient.mp3" type="audio/mpeg">
-                                Your browser does not support the audio element.
-                            </audio>
-                            <p>
-                                By <a href="https://pixabay.com/fr/users/stereocode-31360109/" target="_blank">stereocode</a> from <a href="https://pixabay.com/" target="_blank">Pixabay</a>.
-                            </p>
-                        </div>
+                <div id="video-container" class="hidden">
+                    <div id="video-overlay">
+                        <img id="play-video-button" src="./assets/images/logo-play_video_button.webp" alt="Play video button">
                     </div>
 
-                    <div class="music_container_divider">
-                        <div class="music_items hidden_top">
-                            <p>
-                                Hub: <a href="https://pixabay.com/fr/music/mystere-an-alien-presence-154528/" target="_blank">An Alien Presence</a>
-                            </p>
+                    <video id="video-player" controls>
+                        <source src="./assets/videos/trailer-holberton_survivors.mp4" type="video/mp4">
+                        <p>Your browser does not support HTML5 video playback.</p>
+                        <p>Here is a <a href="./assets/videos/trailer-holberton_survivors.mp4" download="Holberton Survivors Trailer">link to download the video.</a>.</p>
+                    </video>
+                </div>
+            </div>
+
+            <div id="screenshots-container">
+                <p class="text-align-center hidden">
+                    A game inspired by the famous one: <a href="https://store.steampowered.com/app/1794680/Vampire_Survivors/" target="_blank">Vampire Survivors</a>.
+                    <br>
+                    Completed in two months, one dedicated to project preparation and other one of intensive coding.
+                </p>
+
+                <div id="screenshots">
+                    <img class="screenshot hidden left-element" src="./assets/images/screenshots/screenshot001.webp" title="Sceenshot N°1" alt="Game screenshot N°1">
+                    <img class="screenshot hidden right-element" src="./assets/images/screenshots/screenshot002.webp" title="Sceenshot N°2" alt="Game screenshot N°2">
+                    <img class="screenshot hidden left-element" src="./assets/images/screenshots/screenshot003.webp" title="Sceenshot N°3" alt="Game screenshot N°3">
+                    <img class="screenshot hidden right-element" src="./assets/images/screenshots/screenshot004.webp" title="Sceenshot N°4" alt="Game screenshot N°4">
+                    <img class="screenshot hidden left-element" src="./assets/images/screenshots/screenshot005.webp" title="Sceenshot N°5" alt="Game screenshot N°5">
+                    <img class="screenshot hidden right-element" src="./assets/images/screenshots/screenshot006.webp" title="Sceenshot N°6" alt="Game screenshot N°6">
+                </div>
+
+                <div id="screenshot-overlay" class="hidden-overlay">
+                    <button id="prev-button" class="nav-button">&#10094;</button>
+                    
+                    <span id="close-overlay" class="close">&times;</span>
+                    <div class="screenshot-wrapper">
+                        <img id="overlay-image" src="./" alt="">
+                    </div>
+
+                    <button id="next-button" class="nav-button">&#10095;</button>
+                </div>
+
+                <p class="hidden">One of the major challenges of this project was our lack of prior experience in <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank">C#</a> and our introduction to the <a href="https://unity.com/" target="_blank">Unity</a> software. We had to learn these technologies on the fly, applying them directly to our project. Thanks to the <a href="https://www.holbertonschool.fr/methodologie" target="_blank">methodology</a> taught at Holberton School, which prepared us well to tackle this challenge.</p>
+            </div>
+        </section>
+
+        <!-- Leaderboard section -->
+        <section id="leaderboard-section" class="hidden-bottom">
+            <h2>Leaderboard</h2>
+            <h3>BONUS LEVEL LEADERBOARD</h3>
+
+            <div id="leaderboard-container">
+                <script src="https://www.dreamlo.com/lb/65eb5bc08f40bcbe8897ef97/js/10"></script>
+            </div>
+        </section>
+
+        <!-- Thanks section -->
+        <section id="thanks-section">
+            <h2>Thanks</h2>
+
+            <div id="thanks-container">
+                <p class="hidden">
+                    Despite the obstacles encountered, we are proud of the outcome we have achieved. This game is the result of our determination, passion, and willingness to learn.
+                    <br>
+                    We also invite those who would like more information to visit the project's <a href="https://github.com/fchavonet/unity-2d-holberton_survivors" target="_blank">GitHub</a> page.
+                    <br>
+                    <br>
+                    A heartfelt thank you to all contributors who provided freely licensed graphics and music for our project. Your generosity has truly enhanced our work, bringing our vision to life.
+                </p>
+
+                <div id="thanks-links-container">
+                    <!-- Graphical assets -->
+                    <div id="graphical-assets-container" class="hidden left-element">
+                        <a href="https://0x72.itch.io/dungeontileset-ii" target="_blank">
+                            <img src="./assets/images/thanks-dungeon_tileset.webp" alt="">
+                        </a>
+
+                        <p>By <a href="https://0x72.itch.io/" target="_blank">Robert Norenberg</a> from <a href="https://itch.io/" target="_blank">itch.io</a></p>
+                    </div>
+
+                    <!-- Music assets -->
+                    <div id="music-assets-container">
+                        <!-- Music asset item -->
+                        <div class="music-assets-item right-element hidden">
+                            <p>Title screen: <a href="https://pixabay.com/fr/music/ambiant-sword-1-188700/" target="_blank">Sword 1</a></p>
+
                             <audio controls>
-                                <source src="./resources/audio/music-an_alien_presence.mp3" type="audio/mpeg">
+                                <source src="./assets/audio/music-sword_1.mp3" type="audio/mpeg">
                                 Your browser does not support the audio element.
                             </audio>
-                            <p>
-                                By <a href="https://pixabay.com/fr/users/geoffharvey-9096471/" target="_blank">geoffharvey</a> from <a href="https://pixabay.com/" target="_blank">Pixabay</a>.
-                            </p>
+
+                            <p>By <a href="https://pixabay.com/fr/users/its_tigri-42054041/" target="_blank">its_tigri</a> on <a href="https://pixabay.com/" target="_blank">Pixabay</a>.</p>
                         </div>
 
-                        <div class="music_items hidden_bottom">
-                            <p>
-                                Game over: <a href="https://pixabay.com/fr/music/mystere-midnight-secrets-190649/" target="_blank">Midnight Secrets</a>
-                            </p>
+                        <!-- Music asset item -->
+                        <div class="music-assets-item left-element hidden">
+                            <p>Hub: <a href="https://pixabay.com/fr/music/mystere-an-alien-presence-154528/" target="_blank">An Alien Presence</a></p>
+
                             <audio controls>
-                                <source src="./resources/audio/music-midnight_secrets.mp3" type="audio/mpeg">
+                                <source src="./assets/audio/music-an_alien_presence.mp3" type="audio/mpeg">
                                 Your browser does not support the audio element.
                             </audio>
-                            <p>
-                                By <a href="https://pixabay.com/fr/users/universfield-28281460/" target="_blank">UNIVERSFIELD</a> from <a href="https://pixabay.com/" target="_blank">Pixabay</a>.
-                            </p>
+
+                            <p>By <a href="https://pixabay.com/fr/users/geoffharvey-9096471/" target="_blank">geoffharvey</a> on <a href="https://pixabay.com/" target="_blank">Pixabay</a>.</p>
+                        </div>
+
+                        <!-- Music asset item -->
+                        <div class="music-assets-item right-element hidden">
+                            <p>Level one: <a href="https://pixabay.com/fr/music/impulsions-dark-ambient-background-music-for-your-project-189055/" target="_blank">Dark Ambiant</a></p>
+
+                            <audio controls>
+                                <source src="./assets/audio/music-dark_ambient.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+
+                            <p>By <a href="https://pixabay.com/fr/users/stereocode-31360109/" target="_blank">stereocode</a> on <a href="https://pixabay.com/" target="_blank">Pixabay</a>.</p>
+                        </div>
+
+                        <!-- Music asset item -->
+                        <div class="music-assets-item left-element hidden">
+                            <p>Game over: <a href="https://pixabay.com/fr/music/mystere-midnight-secrets-190649/" target="_blank">Midnight Secrets</a></p>
+
+                            <audio controls>
+                                <source src="./assets/audio/music-midnight_secrets.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+
+                            <p>By <a href="https://pixabay.com/fr/users/universfield-28281460/" target="_blank">Universfield</a> on <a href="https://pixabay.com/" target="_blank">Pixabay</a>.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- PARALLAX EFFECT -->
-    <div id="parallax">
-        <!-- <img src="./resources/images/parallax-top.png" alt=""> -->
-        <!-- <img src="./resources/images/parallax-bottom.png" alt=""> -->
-    </div>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-        <h1>CONTACT</h1>
-
-        <div id="contact_form_container">
-            <p class="hidden">
-                We would like to specify that the game is for demonstration purposes only and is not without flaws.
-                However, we encourage people to provide us with feedback through the form below.
-            </p>
-            <form action="send_email.php" method="post">
-                <div class="hidden_bottom">
-                    <label for="first_name">First name:</label>
-                    <input type="text" id="first_name" name="first_name" required>
-                </div>
-                <div class="hidden_bottom">
-                    <label for="last_name">Last name:</label>
-                    <input type="text" id="last_name" name="last_name" required>
-                </div>
-                <div class="hidden_bottom">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="hidden_bottom">
-                    <label for="message">Your feedback:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button class="hidden_bottom" type="submit">SEND FEEDBACK</button>
-            </form>
+        <!-- Parallax effect-->
+        <div id="parallax">
+            <!-- <img src="./assets/images/parallax-top.webp" alt="Top shadow"> -->
+            <!-- <img src="./assets/images/parallax-bottom.webp" alt="Bottom shadow"> -->
         </div>
 
-        <div id="contact_team_container" class="hidden_bottom">
-            <div class="fabien">
-                <span>FABIEN</span>
-                <div>
-                    <a href="https://github.com/fchavonet" target="_blank">
-                        <img class="contact_team_icon" src="./resources/images/logo-github.png" alt="Github de Fabien">
-                    </a>
-                    <a href="https://www.linkedin.com/in/fchavonet/" target="_blank">
-                        <img class="contact_team_icon" src="./resources/images/logo-linkedin.png" alt="LinkedIn de Fabien">
-                    </a>
+        <!-- Contact section -->
+        <section id="contact-section">
+            <h2>Contact</h2>
+
+            <div id="contact-container">
+                <p class="hidden">We would like to specify that the game is for demonstration purposes only and is not without flaws. However, we encourage people to provide us with feedback through the form below.</p>
+
+                <div id="contact-form-container">
+                    <form action="send_email.php" method="post">
+                        <div class="hidden-bottom">
+                            <label for="first_name">First name:</label>
+                            <input type="text" id="first_name" name="first_name" required>
+                        </div>
+
+                        <div class="hidden-bottom">
+                            <label for="last_name">Last name:</label>
+                            <input type="text" id="last_name" name="last_name" required>
+                        </div>
+
+                        <div class="hidden-bottom">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="hidden-bottom">
+                            <label for="message">Your feedback:</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button class="hidden-bottom" type="submit">SEND FEEDBACK</button>
+                    </form>
                 </div>
             </div>
-            <a href="https://www.holbertonschool.fr/" target="_blank">
-                <img id="holberton_seahorse_logotype" src="./resources/images/logo-holberton_seahorse.png" alt="Holberton seahorse logo">
-            </a>
-            <div class="yoann">
-                <span>YOANN</span>
-                <div class="social_media_icons">
-                    <a href="https://www.linkedin.com/in/yoann-rivet/" target="_blank">
-                        <img class="contact_team_icon" src="./resources/images/logo-linkedin.png" alt="LinkedIn de Yoann">
-                    </a>
-                    <a href="https://github.com/SpStigma" target="_blank">
-                        <img class="contact_team_icon" src="./resources/images/logo-github.png" alt="Github de Yoann">
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <div id="move_to_top_button">
-        <img src="./resources/images/logo-move_to_top_button.png" alt="Move to top button">
+    <footer>
+        <div id="fabien" class="hidden-left">
+            <span>FABIEN</span>
+
+            <div>
+                <a href="https://github.com/fchavonet" target="_blank">
+                    <img class="social-media-icon" src="./assets/images/logo-github.webp" alt="">
+                </a>
+
+                <a href="https://www.linkedin.com/in/fchavonet/" target="_blank">
+                    <img class="social-media-icon" src="./assets/images/logo-linkedin.webp" alt="">
+                </a>
+            </div>
+        </div>
+
+        <a class="hidden" href="https://www.holbertonschool.fr/" target="_blank">
+            <img id="holberton-seahorse-logo" src="./assets/images/logo-holberton_seahorse.webp" alt="Holberton seahorse logo">
+        </a>
+
+        <div id="yoann" class="hidden-right">
+            <span>YOANN</span>
+
+            <div>
+                <a href="https://www.linkedin.com/in/yoann-rivet/" target="_blank">
+                    <img class="social-media-icon" src="./assets/images/logo-linkedin.webp" alt="">
+                </a>
+
+                <a href="https://github.com/SpStigma" target="_blank">
+                    <img class="social-media-icon" src="./assets/images/logo-github.webp" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="move-to-top-button">
+        <img src="./assets/images/logo-move_to_top_button.webp" alt="Move to top button">
     </div>
 </body>
 
