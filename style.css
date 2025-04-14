@@ -210,7 +210,7 @@ nav {
 
 /* DOWNLOAD SECTION */
 #download-section {
-    height: 100dvh;
+    height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -565,7 +565,7 @@ nav {
 }
 
 .dreamloLBTable {
-    width: 50%;
+    min-width: 275px;
     border-collapse: collapse;
     text-align: center;
 }
@@ -607,8 +607,9 @@ nav {
     width: 85%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 5rem;
 }
 
 #graphical-assets-container {
@@ -895,10 +896,6 @@ footer {
         font-size: 0.75em;
     }
 
-    .dreamloLBTable {
-        width: 90%;
-    }
-
     /* Thanks section */
     #thanks-section {
         padding-bottom: 0rem;
@@ -915,10 +912,7 @@ footer {
     #thanks-links-container {
         width: 90%;
         flex-direction: column;
-    }
-
-    #graphical-assets-container {
-        padding-bottom: 2rem;
+        gap: 3rem;
     }
 
     #music-assets-container {
@@ -958,7 +952,7 @@ footer {
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    transition: all 0.75s;
+    transition: all 0.5s;
 }
 
 .show {
@@ -983,7 +977,7 @@ footer {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(100%);
-    transition: all 0.75s;
+    transition: all 0.5s;
 }
 
 .show-right {
@@ -1009,7 +1003,7 @@ footer {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 0.75s;
+    transition: all 0.5s;
 }
 
 .show-left {
