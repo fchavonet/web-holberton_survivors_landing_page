@@ -29,6 +29,46 @@
     display: none;
 }
 
+/* LOADER */
+#page-loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Public Pixel";
+    background: #000;
+    transition: opacity 0.3s ease;
+    z-index: 9999;
+}
+
+.loader-box {
+    text-align: center;
+}
+
+.loading-text {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.progress-container {
+    width: 250px;
+    height: 25px;
+    padding: 5px;
+    border: 5px solid var(--text-color);
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.1s ease;
+}
+
 /* GENERAL */
 html,
 body {

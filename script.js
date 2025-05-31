@@ -1,3 +1,29 @@
+/*********
+* LOADER *
+*********/
+
+window.addEventListener("load", function () {
+	const pageLoader = document.getElementById("page-loader");
+	const progressBar = document.getElementById("progress-bar");
+
+	let progress = 0;
+
+	const interval = setInterval(function () {
+		progress += 2;
+		progressBar.style.width = progress + "%";
+
+		if (progress >= 100) {
+			clearInterval(interval);
+			pageLoader.style.opacity = "0";
+			
+			setTimeout(function () {
+				pageLoader.style.display = "none";
+			}, 300);
+		}
+	}, 50);
+});
+
+
 /*********************************
 * RESPONSIVE NAVIGATION BEHAVIOR *
 *********************************/
